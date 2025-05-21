@@ -1,0 +1,176 @@
+/* General styling for the page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the main content */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 70px auto;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Main heading */
+.container h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Paragraph text */
+.container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Avatar styling */
+.profile-avatar {
+    margin: 20px 0;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #007bff;
+}
+
+/* Actions buttons */
+.actions,
+.admin-actions {
+    margin-top: 25px;
+}
+
+.actions a,
+.admin-actions a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+/* Specific buttons */
+.profile-btn {
+    background-color: #28a745;
+}
+
+.profile-btn:hover {
+    background-color: #218838;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.admin-btn {
+    background-color: #17a2b8;
+}
+
+.admin-btn:hover {
+    background-color: #117a8b;
+}
+
+.login-btn {
+    background-color: #007bff;
+}
+
+.login-btn:hover {
+    background-color: #0069d9;
+}
+
+.signup-btn {
+    background-color: #6f42c1;
+}
+
+.signup-btn:hover {
+    background-color: #5936a2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px 25px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-msg {
+    color: #d9534f;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.success-msg {
+    color: #155724;
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+ul.file-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul.file-list li {
+    background: white;
+    margin-bottom: 12px;
+    padding: 12px 18px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

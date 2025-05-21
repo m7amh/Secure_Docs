@@ -1,0 +1,711 @@
+/* إعادة تعريف القيم الافتراضية */
+:root {
+    --primary-color: #2B4D40;
+    --secondary-color: #6a8279;
+    --success-color: #10B981;
+    --danger-color: #EF4444;
+    --dark-color: #1F2937;
+    --light-color: #F3F4F6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* شريط التنقل */
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1abc9c;
+}
+
+/* مساحة تحت شريط التنقل */
+.container {
+    margin-top: 70px; /* لإفساح المجال لشريط التنقل */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* رسائل التنبيه */
+.message {
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* تصميم صفحة تسجيل الدخول */
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.login-box h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #16a085;
+}
+
+/* روابط إضافية */
+.login-box p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-box p a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+.login-box p a:hover {
+    text-decoration: underline;
+}
+
+/* عرض صورة الحساب */
+.profile-avatar {
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* أزرار الإجراءات */
+.actions a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions a:hover {
+    background-color: #0056b3;
+}
+
+/* زر لوحة التحكم للمسؤول */
+.admin-actions {
+    margin-top: 20px;
+}
+
+.admin-actions a {
+    background-color: #28a745;
+}
+
+.admin-actions a:hover {
+    background-color: #218838;
+}
+
+/* إعادة الضبط الأساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* شريط التنقل */
+.navbar {
+    background: #2c3e50;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white !important;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo i {
+    margin-right: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* المحتوى الرئيسي */
+.container.main-content {
+    flex: 1;
+    padding: 2rem 0;
+    background: white;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+/* تصميم الفورم */
+.auth-form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52,152,219,0.1);
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+/* رسائل الخطأ */
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .auth-form {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container {
+        padding: 0.5rem;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+}
+
+/* Remove or override old .footer styles */
+.footer {
+    position: static !important;
+    background: none !important;
+    color: inherit !important;
+    padding: 0 !important;
+    width: auto !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+    display: none !important;
+}
+
+/* Main footer styles */
+.main-footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 3rem 0 1rem;
+    margin-top: auto;
+    position: static;
+    width: 100%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    color: #9CA3AF;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul a {
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-section ul a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #9CA3AF;
+    font-size: 1.5rem;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+    color: #9CA3AF;
+}
+
+/* Responsive styles for footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Remove dots from header nav */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ملف CSS مضغوط ومحسن */
+
+  
+  * {
+    margin:0; padding:0; box-sizing:border-box;
+    font-family:'Segoe UI',Arial,sans-serif;
+  }
+  
+  body {
+    background:#f8f9fa; min-height:100vh;
+    display:flex; flex-direction:column;
+    line-height:1.6; color:var(--dark);
+  }
+  
+  /* شريط التنقل المضغوط */
+  .navbar {
+    background:var(--secondary); padding:0.8rem 0;
+    position:sticky; top:0; z-index:1000;
+    box-shadow:var(--shadow);
+  }
+  
+  .container {
+    width:94%; max-width:1200px;
+    margin:0 auto;
+  }
+  
+  .navbar .container {
+    display:flex; justify-content:space-between;
+    align-items:center; gap:1rem;
+  }
+  
+  .logo {
+    color:var(--light); font-size:1.2rem;
+    text-decoration:none; font-weight:600;
+    display:flex; align-items:center; gap:0.5rem;
+  }
+  
+  .nav-links {
+    display:flex; gap:1.2rem;
+    align-items:center;
+  }
+  
+  .nav-links a {
+    color:rgba(255,255,255,0.9); font-size:0.9rem;
+    text-decoration:none; transition:color 0.2s;
+    display:flex; align-items:center; gap:0.4rem;
+  }
+  
+  .nav-links a:hover { color:var(--accent); }
+  
+  /* المحتوى الرئيسي */
+  .main-content {
+    flex:1; padding:1.5rem 0;
+    margin-top:1.5rem;
+  }
+  
+  /* النماذج المدمجة */
+  .auth-form {
+    max-width:380px; margin:1.5rem auto;
+    padding:1.5rem; background:#fff;
+    border-radius:8px; box-shadow:var(--shadow);
+  }
+  
+  .form-group { margin-bottom:1.2rem; }
+  
+  .form-control {
+    width:100%; padding:0.7rem;
+    border:1px solid #ddd; border-radius:4px;
+    font-size:0.95rem; transition:border 0.2s;
+  }
+  
+  .form-control:focus {
+    border-color:var(--primary);
+    outline:none;
+  }
+  
+  .btn {
+    padding:0.7rem 1.2rem; border:none;
+    border-radius:4px; cursor:pointer;
+    font-weight:500; transition:all 0.2s;
+    display:flex; align-items:center;
+    justify-content:center; gap:0.5rem;
+  }
+  
+  .btn-primary {
+    background:var(--primary); color:#fff;
+  }
+  
+  .btn-primary:hover { background:#2980b9; }
+  
+  /* التذييل المضغوط */
+  .footer {
+    background:var(--secondary); color:var(--light);
+    padding:1rem 0; margin-top:auto;
+    font-size:0.85rem; text-align:center;
+  }
+  
+  /* التكيف مع الشاشات الصغيرة */
+  @media (max-width: 768px) {
+    .navbar .container { flex-direction:column; }
+    .nav-links { margin-top:0.5rem; }
+    .auth-form { width:90%; padding:1.2rem; }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-links { flex-direction:column; gap:0.8rem; }
+    .logo, .nav-links a { font-size:0.9rem; }
+  }
+  
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-content, .footer-section, .footer-bottom {
+    text-align: center;
+}
+  
+html, body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.main-footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 3rem 0 1rem;
+    margin-top: auto;
+    position: static;
+    width: 100%;
+}
+
+/* Header styles */
+.main-header {
+    background: var(--dark-color); /* Change to footer's dark color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: white; /* Ensure text remains white */
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white; /* Ensure logo is white */
+    text-decoration: none;
+}
+
+.logo i {
+    margin-right: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    color: white; /* Ensure nav links are white */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #e0e0e0; /* Slightly lighter on hover */
+}
+  
